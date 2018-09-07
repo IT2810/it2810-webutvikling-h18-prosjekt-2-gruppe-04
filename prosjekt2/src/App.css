@@ -1,28 +1,34 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    background-color:#f2f2f2;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#root {
+    height: 100%;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.grid-wrapper {
+    display: grid;
+    grid-template-areas: 'header header' 'topbar topbar' 'sidebar gallery' ;
+    grid-template-columns: 20% auto ;
+    grid-template-rows: 5rem 5em auto;
+    height: 100%;
 }
 
-.App-title {
-  font-size: 1.5em;
+.header {
+    grid-area: header;
 }
 
-.App-intro {
-  font-size: large;
+.topbar {
+    grid-area: topbar;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.sidebar {
+    grid-area: sidebar;
+}
+
+.gallery {
+    grid-area: gallery;
 }
