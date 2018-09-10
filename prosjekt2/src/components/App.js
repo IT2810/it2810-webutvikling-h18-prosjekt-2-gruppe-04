@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Sidebar from './Sidebar.js'
+import '../styles/App.css';
 
 class App extends Component {
   render() {
@@ -10,8 +10,7 @@ class App extends Component {
           </div>
           <div className="topbar">
           </div>
-          <div className="sidebar">
-          </div>
+          <Sidebar/>
           <div className="gallery">
           </div>
       </div>
