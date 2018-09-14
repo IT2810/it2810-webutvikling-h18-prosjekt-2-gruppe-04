@@ -1,7 +1,3 @@
-/*
- * Part of this code is inspired from a w3schools demo of custom radiobuttons:
- * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio
- */
 
 .sidebar {
     grid-area: sidebar;
@@ -10,6 +6,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     color: #ffffff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    overflow-x: hidden;
+    min-height: 30rem;
 }
 
 .sidebar-radio-wrapper {
@@ -19,59 +19,12 @@
     margin: 0 1em;
 }
 
-.sidebar-radio-wrapper label {
-    height: 2em;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.sidebar-radio-wrapper label:hover .custom-radio {
-    background-color: rgba(0,0,0,0.15);
-}
-
-.sidebar-radio-wrapper input:checked ~ .custom-radio:after {
-    display: block;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    width: 12px;
-    height: 12px;
-    top: 6px;
-    left: 6px;
-    background-color: #fff;
-}
-
-.sidebar-radio-wrapper .custom-radio:after {
-    content: '';
-    position: relative;
-    border-radius: 100%;
-    top: 12px;
-    left: 12px;
-    width: 0;
-    height: 0;
-}
-
-.sidebar-radio {
-    opacity: 0;
-    width: 24px;
-    height: 24px;
-
-}
-
-.custom-radio {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    border: 2px solid #fff;
-    border-radius: 100%;
-    background-color: #3700fe;
-}
-
 .sidebar-subtitle {
     font-size: 32px;
 }
 
 .sidebar-button {
+    display: none;
     position: absolute;
     font-size: 24px;
     height: 60px;
@@ -82,6 +35,8 @@
     border-top-right-radius: 70px;
     background-color: #3700fe;
     color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .sidebar-button:hover {
@@ -92,3 +47,21 @@
     outline: none;
 }
 
+@media only screen and (max-width: 780px) {
+    .sidebar-button {
+        display: block;
+    }
+
+    .sidebar {
+        grid-area: gallery;
+        z-index: 99;
+    }
+}
+
+@media only screen and (max-height: 720px) {
+    .sidebar-subtitle {
+        font-size: 24px;
+        margin: 1rem 0;
+    }
+
+}
