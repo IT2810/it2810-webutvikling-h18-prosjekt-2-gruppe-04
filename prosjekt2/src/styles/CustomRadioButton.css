@@ -1,0 +1,52 @@
+/*
+ * Part of this code is inspired from a w3schools demo of custom radiobuttons:
+ * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio
+ */
+
+.sidebar-radio {
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.sidebar-radio-wrapper label {
+    height: 3rem;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-radio-wrapper label:hover .custom-radio {
+    background-color: rgba(0,0,0,0.15);
+}
+
+.sidebar-radio-wrapper input:checked ~ .custom-radio:after {
+    display: block;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    width: 18px;
+    height: 18px;
+    top: 3px;
+    left: 3px;
+    background-color: #fff;
+}
+
+.sidebar-radio-wrapper .custom-radio:after {
+    content: '';
+    position: relative;
+    border-radius: 100%;
+    top: 12px;
+    left: 12px;
+    width: 0;
+    height: 0;
+}
+
+.custom-radio {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    background-color: #3700fe;
+}

@@ -5,6 +5,7 @@ import Header from './Header.js'
 
 
 import '../styles/App.css';
+import Gallery from "./Gallery";
 
 class App extends Component {
   render() {
@@ -13,8 +14,7 @@ class App extends Component {
           <Header/>
           <Topbar/>
           <Sidebar/>
-          <div className="gallery">
-          </div>
+          <Gallery/>
       </div>
     );
   }

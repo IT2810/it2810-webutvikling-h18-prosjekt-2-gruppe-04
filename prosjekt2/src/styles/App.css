@@ -1,6 +1,9 @@
 .grid-wrapper {
     display: grid;
-    grid-template-areas: 'header header' 'topbar topbar' 'sidebar gallery' ;
+    grid-template-areas:
+            'header header'
+            'topbar topbar'
+            'sidebar gallery';
     grid-template-columns: 20rem auto ;
     grid-template-rows: 5rem 5rem auto;
     height: 100%;
@@ -20,10 +23,19 @@
 
 @media only screen and (max-width: 780px) {
     .grid-wrapper {
-        display: grid;
-        grid-template-areas: 'header header' 'topbar topbar' 'gallery gallery' ;
-        grid-template-columns: 20rem auto ;
-        grid-template-rows: 5rem 5rem auto;
-        height: 100%;
+        grid-template-areas:
+                'header'
+                'gallery';
+        grid-template-columns: auto;
+        grid-template-rows: 5rem auto;
     }
+
+    .topbar {
+        display: none;
+    }
+
+    .header {
+        grid-area: header;
+    }
+    
 }
