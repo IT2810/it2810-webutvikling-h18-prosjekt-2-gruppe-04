@@ -2,8 +2,12 @@ body {
   margin: 0;
   padding: 0;
   background-color:#f2f2f2;
-  font-family: 'Filson Soft', 'Arial', sans-serif;
+  font-family: 'Arista', 'Arial', sans-serif;
   height: 100vh;
+}
+@font-face {
+  font-family: 'Arista';
+  src: url(../fonts/Paloseco-Light.ttf);
 }
 
 #root {

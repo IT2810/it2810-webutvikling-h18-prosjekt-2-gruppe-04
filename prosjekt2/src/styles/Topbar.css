@@ -43,7 +43,7 @@
         grid-area: header !important;
         padding-top:4em;
         z-index: 100;
-        height: 12.25em;
+        min-height: 12.25em;
     }
 
     .image-selector{

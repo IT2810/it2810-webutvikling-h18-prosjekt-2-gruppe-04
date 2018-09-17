@@ -78,7 +78,9 @@ class App extends Component {
         this.fetchImage("/media/svg/" + this.state.categorySvg + "/" + index + ".svg");
         this.fetchText(this.state.categoryText, index);
         this.setState({audio: "/media/sound/" + this.state.categoryAudio + "/" + index + ".mp3"});
-        this.setState({ isMenuHidden: true });
+        if (window.innerWidth < 780) {
+            this.setState({ isMenuHidden: true });
+        }
     }
 
     async fetchImage(url) {
