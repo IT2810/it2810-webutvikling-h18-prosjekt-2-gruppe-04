@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    viewBox="0 0 732 478"
+  >
+  <g
+      id="imagebot_2"
+    >
+    <rect
+        id="imagebot_31"
+        stroke-linejoin="null"
+        stroke-opacity="0"
+        height="135"
+        width="175"
+        stroke="#000000"
+        stroke-linecap="null"
+        stroke-dasharray="null"
+        y="122.12"
+        x="199.13"
+        stroke-width="5"
+        fill="#333333"
+    />
+    <ellipse
+        id="imagebot_32"
+        stroke-linejoin="null"
+        stroke-linecap="null"
+        stroke-opacity="null"
+        rx="47.5"
+        ry="22.5"
+        stroke="#0e232e"
+        cy="242.13"
+        cx="269.12"
+        stroke-dasharray="null"
+        stroke-width="3.5"
+        fill="#bf0000"
+    />
+    <path
+        id="imagebot_29"
+        d="m83 561.41c107.87 39.25 87.32 14.95 168-10 262.96-196.17 467.28 44.75 550 122-99.84-2.04-126.69 61.51-184 118-159.69 119.97-352.83-53.72-538-122l4-108z"
+        transform="matrix(.52942 0 0 .52942 308.03 -36.898)"
+        stroke="#000"
+        stroke-width="8"
+        fill="#f90"
+    />
+    <path
+        id="imagebot_28"
+        d="m199.82 242.82c-12.2 13.07-56.88 15.09-69.04 32.2-12.17 17.11 8.18 49.31-3.94 72.71 6.75 11.06 16.27 17.11 27.89 19.4 8.59-0.1 11.73-4.61 9.41-13.52-5-9.89-10.95-9.02-16.6-11.54 8.44-15.69-12.6-42.38-1.58-57.7s54.08-19.27 65.71-34.5l-11.85-7.05z"
+        transform="rotate(-12.87 191.7 297.48) translate(22.5 -7.5)"
+        stroke="#000"
+        stroke-width="4"
+        fill="#b88100"
+    />
+    <path
+        id="imagebot_27"
+        stroke="#0e232e"
+        stroke-width="5"
+        d="m190.11 219.12v193.42h215.32v-327.42l-215.32-0.005v51.685l-189 44.48 189 37.84c44.18 2.81 68.55-6.33 83.31-21.27 7.38-7.46 27.35-43.88 31.2-53.48 0.96-2.39 0.99 21.02 2.57 36.87-0.46 1.05-2.4 18.02-1.78 24.39-3.12 8.87-7.42 18.4-13.84 23.31-20.67 23.39-68.97 1.71-67.54-3.38"
+        fill="#f90"
+    />
+    <path
+        id="imagebot_26"
+        d="m402 510.36l74 4"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="8.052"
+        fill="none"
+    />
+    <path
+        id="imagebot_25"
+        d="m496.58 414.82c48.94-41.11 87.93-94.94 141.42-141.42-7.46 46.98-2.13 93.54 0 142.31l-141.42-0.88v-0.01z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="8"
+        fill="#f90"
+    />
+    <path
+        id="imagebot_24"
+        d="m568.5 382.36h47.5v-58.5l-47.5 58.5z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="4"
+        fill="#b88100"
+    />
+    <path
+        id="imagebot_23"
+        d="m462.07 412.63c-43.38-44.55-85.72-96.74-141.42-141.42-2.34 46.98-7.05 93.53 0 142.31l141.42-0.88v-0.01z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="8"
+        fill="#f90"
+    />
+    <path
+        id="imagebot_22"
+        d="m390.15 380.17h-47.5v-58.5l47.5 58.5z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="4"
+        fill="#b88100"
+    />
+    <path
+        id="imagebot_21"
+        d="m311.89 496.41c0 24.5-15.72 44.36-35.11 44.36s-35.1-19.86-35.1-44.36 15.72-44.35 35.1-44.35 35.11 19.86 35.11 44.35z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="8.053"
+        fill="#fff"
+    />
+    <path
+        id="imagebot_20"
+        d="m360.05 498.79c0 24.5-15.72 44.36-35.1 44.36s-35.11-19.86-35.11-44.36 15.72-44.35 35.11-44.35 35.1 19.86 35.1 44.35z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="8.053"
+        fill="#fff"
+    />
+    <path
+        id="imagebot_19"
+        d="m278.19 518.24c0 8.81-5.43 15.96-12.13 15.96-6.69 0-12.12-7.15-12.12-15.96s5.42-15.95 12.12-15.95 12.13 7.14 12.13 15.95z"
+        transform="translate(1.25) matrix(.52942 0 0 .59570 71.427 -169.06)"
+        stroke="#0e232e"
+        stroke-width="8.053"
+        fill="#2d2d2d"
+    />
+    <path
+        id="imagebot_18"
+        d="m328.14 517.95c0 8.81-5.42 15.95-12.12 15.95s-12.13-7.14-12.13-15.95 5.43-15.96 12.13-15.96c6.69 0 12.12 7.15 12.12 15.96z"
+        transform="translate(1.25) matrix(.52942 0 0 .59570 71.427 -169.06)"
+        stroke="#0e232e"
+        stroke-width="8.053"
+        fill="#2d2d2d"
+    />
+    <path
+        id="imagebot_17"
+        d="m140.37 533.61c0 29.57-23.97 53.54-53.54 53.54-29.569 0-53.54-23.97-53.54-53.54s23.97-53.54 53.54-53.54 53.54 23.97 53.54 53.54z"
+        transform="matrix(.36558 0 0 .41134 -12.17 -44.07)"
+        stroke="#0e232e"
+        stroke-width="8.053"
+        fill="#2d2d2d"
+    />
+    <path
+        id="imagebot_16"
+        d="m30.806 608.1l9.958 37.16 29.728-29.72-39.686-7.44z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="4"
+        fill="none"
+    />
+    <path
+        id="imagebot_15"
+        d="m86.223 619.42l9.958 37.16 29.729-29.73-39.687-7.43z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="4"
+        fill="none"
+    />
+    <path
+        id="imagebot_14"
+        d="m139.26 626.49l9.96 37.16 29.73-29.73-39.69-7.43z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="4"
+        fill="none"
+    />
+    <path
+        id="imagebot_13"
+        d="m256.76 645.11l18.66 33.65 21.64-36.05-40.3 2.4z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="4"
+        fill="#fff"
+    />
+    <path
+        id="imagebot_12"
+        d="m193.7 637.8l9.96 37.16 29.73-29.72-39.69-7.44z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="4"
+        fill="#fff"
+    />
+    <path
+        id="imagebot_11"
+        d="m246.44 443.36c8.4 0.16 16.63-1.67 24.74-3.62 4.74-1.04 9.38-2.46 14.04-3.8 1.35-0.39 1.91 1.53 0.55 1.92-4.69 1.35-9.36 2.78-14.12 3.83-8.27 1.98-16.66 3.83-25.21 3.67-1.42 0-1.42-2 0-2z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="8.052"
+        fill="#fff"
+    />
+    <path
+        id="imagebot_10"
+        d="m325.11 434.64c6.04 1.83 12.01 3.87 18.01 5.85 5.93 2.11 12.02 3.79 17.92 5.97 2.68 1.14 5.56 1.58 8.39 2.12 1.76 0.48 0.91 0.23 2.55 0.72 1.36 0.4 0.79 2.32-0.57 1.92-1.55-0.46-0.77-0.24-2.35-0.68-2.94-0.56-5.93-1.02-8.71-2.2-5.88-2.18-11.95-3.84-17.86-5.95-5.97-1.97-11.92-4-17.93-5.83-1.36-0.38-0.81-2.31 0.55-1.92z"
+        transform="matrix(.52942 0 0 .59570 67.677 -161.56)"
+        stroke="#0e232e"
+        stroke-width="8.052"
+        fill="#fff"
+    />
+    <path
+        id="imagebot_8"
+        d="m352.2 859.06c-5.07 41.19-11.42 82.63 0 120.64h-128.47c-20.59-7.22-3.38-9.74 0-13.99l62.21-17.75c-28.8-20.15-83.45-29.15-62.21-89.77l128.47 0.87z"
+        transform="matrix(.52942 0 0 .52942 70.854 -41.134)"
+        stroke="#000"
+        stroke-width="7.5423"
+        fill="#b88100"
+    />
+    <path
+        id="imagebot_7"
+        d="m631.52 859.34c-9.53 42.06-7.45 81.87 0 120.64h-128.47c-20.59-7.22-3.38-9.74 0-13.99l62.21-17.75c-28.8-20.15-83.46-29.15-62.22-89.77l128.47 0.87h0.01z"
+        transform="matrix(.52942 0 0 .52942 70.854 -41.134)"
+        stroke="#000"
+        stroke-width="7.5423"
+        fill="#b88100"
+    />
+    <path
+        id="imagebot_6"
+        d="m428.5 698.81c0 75.76-42.42 137.18-94.75 137.18s-94.75-61.42-94.75-137.18c0-75.76 42.42-137.18 94.75-137.18s94.75 61.42 94.75 137.18z"
+        transform="matrix(.52942 0 0 .52942 70.854 -41.134)"
+        stroke="#0e232e"
+        stroke-width="8.053"
+        fill="#ffc022"
+    />
+    <path
+        id="imagebot_5"
+        stroke="#000"
+        stroke-width="4"
+        d="m368.25 226.13c7.61 16.18 56 21.23 62.34 41.25 6.34 20.01-28.13 56.23-23.76 82.23-9.8 8.45-21.98 10.05-33.74 8.67-8.14-2.73-9.75-7.98-4.81-15.75 7.78-7.89 13.18-5.24 19.33-5.91l29.74-58.3c-5.8-17.96-57.39-24.8-63.79-42.86l14.69-9.33z"
+        fill="#b88100"
+    />
+    <title
+      >imagebot_2</title
+    >
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>

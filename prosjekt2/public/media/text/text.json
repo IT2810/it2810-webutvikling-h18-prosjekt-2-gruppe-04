@@ -1,0 +1,17 @@
+{
+  "cat":[ "This is a cat, cats are cute.",
+          "This cat is a female, but it might also be male. Who knows?",
+          "This is just a cat, noting to see here. Move along.",
+          "This might be a cat, cats come in all shapes and sizes. Saw one that looks like an elephant once, no joke."
+        ],
+  "dog":[ "This is a dog, its name is Fido and it loves long walks in the countryside.",
+          "This dog is a bitch.",
+          "This dog is actually bright orange, who would've thunk?",
+          "This might not be an ordinary dog, but a good dog none the less."
+        ],
+  "fox":[ "This is a fox, it likes to sneak into your chicken coop.",
+          "This fox thinks its a polar bear. Weird.",
+          "What does a fox really say? Call me if you find out.",
+          "I've never liked foxes, one even killed my two rabbits. RIP in peace."
+        ]
+}
