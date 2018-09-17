@@ -30,17 +30,17 @@ class App extends Component {
         let url;
         switch (group) {
             case "svg":
-                url = "/media/" + group + "/" + value + ".svg";
+                url = "/media/" + group + "/" + value + "/" + this.state.tabIndex +  ".svg";
                 this.fetchImage(url);
-                this.setState({categorySound: value});
+                this.setState({categorySvg: value});
                 break;
             case "text":
                 url = "/media/" + group + "/" + value + ".txt";
-                this.fetchText(url);
+                this.fetchText(value, this.state.tabIndex);
                 this.setState({categoryText: value});
                 break;
-            case "audio":
-                url = "/media/" + group + "/" + value + ".mp3";
+            case "sound":
+                url = "/media/" + group + "/" + value + "/" + this.state.tabIndex + ".wav";
                 this.setState({audio: url});
                 this.setState({categoryAudio: value});
                 break;
@@ -48,16 +48,13 @@ class App extends Component {
                 console.log("Received unsupported group: " + group);
                 break;
         }
-
-        console.log(url);
     }
 
     onTabChanged(index) {
-        console.log(index);
         this.setState({tabIndex: index});
         this.fetchImage("/media/svg/" + this.state.categorySvg + "/" + index + ".svg");
-        this.fetchText("/media/text/" + this.state.categoryText + "/" + index + ".txt");
-        this.setState({audio: "/media/audio/" + this.state.categoryAudio + "/" + index + ".mp3"});
+        this.fetchText(this.state.categoryText, index);
+        this.setState({audio: "/media/sound/" + this.state.categoryAudio + "/" + index + ".wav"});
     }
 
     async fetchImage(url) {
@@ -67,11 +64,11 @@ class App extends Component {
         this.setState({svg: text});
     }
 
-    async fetchText(url) {
-        const response = await fetch(url, {});
-        const text = await response.text();
+    async fetchText(category, index) {
+        const response = await fetch("/media/text/text.json", {});
+        const text = await response.json();
 
-        this.setState({text: text});
+        this.setState({text: text[category][index]});
     }
 
     render() {

@@ -23,7 +23,7 @@ class Gallery extends Component {
 
                     </div>
                     <div className="gallery-text-wrapper">
-                        <h3>Tittel på teksten</h3>
+                        <h3>Om bildet</h3>
                         <p>
                             {this.props.text}
                         </p>
