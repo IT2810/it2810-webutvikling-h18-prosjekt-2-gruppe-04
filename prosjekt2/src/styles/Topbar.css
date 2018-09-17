@@ -29,7 +29,10 @@
 
 @media only screen and (max-width: 780px) {
     .topbar{
-        height:15.5rem;
+        grid-area: header !important;
+        padding-top:4em;
+        z-index: 1;
+        height: 15.5em;
     }
     .image-selector{
         margin: auto;
