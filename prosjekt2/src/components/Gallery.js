@@ -3,24 +3,37 @@ import '../styles/Gallery.css';
 
 
 class Gallery extends Component {
+
+    constructor(props) {
+        super(props);
+        this.audio = React.createRef();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.audio !== this.props.audio) {
+            this.audio.current.load();
+        }
+    }
+
     render() {
         return (
             <div className="gallery">
                 <div className="gallery-wrapper">
-                    <svg className="gallery-svg-frame">
-                        <rect width="100%" height="100%" fill="#dde"></rect>
-                    </svg>
+                    <div className="gallery-svg-frame" dangerouslySetInnerHTML={{__html: this.props.svg}}>
+
+                    </div>
                     <div className="gallery-text-wrapper">
-                        <h3>Tittel på bildet</h3>
+                        <h3>Tittel på teksten</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi sem, porta ut
-                            hendrerit sit amet, lacinia a tortor. Aliquam erat volutpat. Cras vitae eros urna. Donec non
-                            dolor feugiat, pulvinar turpis blandit, sodales augue. Mauris lorem leo, tempor et faucibus
-                            nec, pharetra vitae risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                            tempus dapibus lorem, sit amet iaculis orci varius vel. Nulla facilisi.
+                            {this.props.text}
                         </p>
                     </div>
-                    <div className="gallery-playbar">Playbar</div>
+                    <div className="gallery-playbar">
+                        <audio controls ref={this.audio} autoPlay >
+                            <source src={this.props.audio} type="audio/mpeg" />
+                            If you see this text, your browser doesn't support the audio tag.
+                        </audio>
+                    </div>
                 </div>
             </div>
         )

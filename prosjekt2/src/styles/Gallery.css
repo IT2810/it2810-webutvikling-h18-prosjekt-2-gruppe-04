@@ -12,23 +12,42 @@
     height: 100%;
 }
 .gallery-svg-frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: svg-frame;
+    background-color: #dde;
     width: 100%;
     height: 100%;
 }
+
+.gallery-svg-frame svg {
+    max-height: 100%;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+}
+
 .gallery-text-wrapper{
     grid-area: text;
     margin: 5%;
 }
+
 .gallery-playbar{
     grid-area: playbar;
     background-color: #f08080;
     color: #fff;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 5rem;
     cursor: pointer;
 }
+
+.gallery-playbar audio {
+    width: 90%;
+}
+
 .gallery-playbar:hover{
     background-color: #f1a0a0;
 }

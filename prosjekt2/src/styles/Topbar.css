@@ -3,26 +3,29 @@
     width: 100%;
     border-bottom: 0.25rem solid #3700fe;
 }
+
+.image-selector {
+    height: 100%;
+}
+
 .image-selector div{
+    height: 100%;
     vertical-align: middle;
     text-align: center;
     line-height: 2.5rem;
 }
-.image-selector div a h3{
+.image-selector div button{
+    height: 100%;
     font-weight: lighter;
-}
-.image-selector div a{
     color:#3700fe;
+    font-size: 20px;
     text-decoration: none;
     display:inline-block;
-    padding-right: 1em;
-    padding-left:1em;
+    padding: 0.5em 1em;
+    border: none;
+    background-color: transparent;
 }
-.image-selector div a:visited{
-    text-decoration: none;
-    color:#3700fe;
-}
-.image-selector div a:hover{
+.image-selector div button:hover{
     background-color: #3700fe;
     color:white;
 }
@@ -52,13 +55,5 @@
         display:block;
         padding-right: 1em;
         padding-left:1em;
-    }
-    .image-selector div a:visited{
-        text-decoration: none;
-        color:#3700fe;
-    }
-    .image-selector div a:hover{
-        background-color: #3700fe;
-        color:white;
     }
 }
