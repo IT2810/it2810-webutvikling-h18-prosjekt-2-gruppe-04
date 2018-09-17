@@ -14,6 +14,7 @@ class Header extends Component {
     constructor(props) {
         super(props);
     }
+
     render() {
         return (
             <div className="header" style={{borderBottom: (this.props.isMenuHidden) ? "4px solid #3700fe" : "4px solid white"}}>

@@ -22,33 +22,31 @@ class Sidebar extends Component {
     }
 
     resize() {
-        this.setState({
-            smallScreen: window.innerWidth <= 780,
-        });
+        this.setState({smallScreen: window.innerWidth <= 780});
     }
 
     render() {
         return (
             <div className="sidebar" style={{width: (this.state.isNavClosed && this.state.smallScreen) ? "0" : "20rem"}}>
                 <div className="sidebar-radio-wrapper">
-                    <h2 className="sidebar-subtitle">Media</h2>
-                    <CustomRadioButton title={"Lyd 1"} groupname={"media"} value={"lyd1"} checked={true} />
-                    <CustomRadioButton title={"Lyd 2"} groupname={"media"} value={"lyd2"} />
-                    <CustomRadioButton title={"Lyd 3"} groupname={"media"} value={"lyd3"} />
+                    <h2 className="sidebar-subtitle">Lyd</h2>
+                    <CustomRadioButton title={"Hund"} group={"sound"} value={"dog"} defaultChecked={true} onChange={this.props.onChange} />
+                    <CustomRadioButton title={"Katt"} group={"sound"} value={"cat"} onChange={this.props.onChange} />
+                    <CustomRadioButton title={"Rev"} group={"sound"} value={"fox"} onChange={this.props.onChange} />
                 </div>
 
                 <div className="sidebar-radio-wrapper">
                     <h2 className="sidebar-subtitle">Bilde</h2>
-                    <CustomRadioButton title={"Bilde 1"} groupname={"picture"} value={"bilde1"} checked={true} />
-                    <CustomRadioButton title={"Bilde 2"} groupname={"picture"} value={"bilde2"}/>
-                    <CustomRadioButton title={"Bilde 3"} groupname={"picture"} value={"bilde3"}/>
+                    <CustomRadioButton title={"Hund"} group={"svg"} value={"dog"} defaultChecked={true} onChange={this.props.onChange} />
+                    <CustomRadioButton title={"Katt"} group={"svg"} value={"cat"} onChange={this.props.onChange}/>
+                    <CustomRadioButton title={"Rev"} group={"svg"} value={"fox"} onChange={this.props.onChange}/>
                 </div>
 
                 <div className="sidebar-radio-wrapper">
                     <h2 className="sidebar-subtitle">Tekst</h2>
-                    <CustomRadioButton title={"Tekst 1"} groupname={"text"} value={"text1"} checked={true} />
-                    <CustomRadioButton title={"Tekst 2"} groupname={"text"} value={"text2"}/>
-                    <CustomRadioButton title={"Tekst 3"} groupname={"text"} value={"text3"}/>
+                    <CustomRadioButton title={"Hund"} group={"text"} value={"dog"} defaultChecked={true} onChange={this.props.onChange} />
+                    <CustomRadioButton title={"Katt"} group={"text"} value={"cat"} onChange={this.props.onChange} />
+                    <CustomRadioButton title={"Rev"} group={"text"} value={"fox"} onChange={this.props.onChange} />
                 </div>
                 <button type="button" style={{marginLeft: this.state.isNavClosed ? "0" : "20rem"}}
                         className="sidebar-button" onClick={this.toggleNav}>></button>

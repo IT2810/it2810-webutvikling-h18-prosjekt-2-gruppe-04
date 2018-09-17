@@ -1,37 +1,51 @@
 .gallery{
     grid-area: gallery;
-    margin:  0 3% 1rem 3%;
 }
 .gallery-wrapper{
     display: grid;
     grid-template-areas:
             'svg-frame text'
-            'svg-frame playbar';
+            'playbar playbar';
     grid-template-columns: 60% auto;
     grid-template-rows: auto 5rem;
     height: 100%;
 }
 .gallery-svg-frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: svg-frame;
+    background-color: #dde;
     width: 100%;
     height: 100%;
 }
+
+.gallery-svg-frame svg {
+    max-height: 90%;
+    max-width: 90%;
+    height: 90%;
+    width: 90%;
+}
+
 .gallery-text-wrapper{
     grid-area: text;
     margin: 5%;
 }
+
 .gallery-playbar{
     grid-area: playbar;
-    background-color: #f08080;
+    background-color: #191169;
     color: #fff;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 5rem;
-    cursor: pointer;
 }
-.gallery-playbar:hover{
-    background-color: #f1a0a0;
+
+.gallery-playbar audio {
+    width: 50%;
 }
+
 @media only screen and (max-width: 780px) {
     .gallery-wrapper{
         grid-template-areas:

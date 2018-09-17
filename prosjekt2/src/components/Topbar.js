@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import '../styles/Topbar.css';
+
 class Topbar extends Component {
+
     render() {
         return (
             <div className="topbar" style={{display: (this.props.isMenuHidden) ? "none" : "inline-block"}}>
                 <div className="image-selector">
                     <div>
-                        <a href="#"><h3>Gambas</h3></a>
-                        <a href="#"><h3>Tattier</h3></a>
-                        <a href="#"><h3>Louvré</h3></a>
-                        <a href="#"><h3>Rüpee</h3></a>
+                        <button className={(this.props.tabIndex === 0) ? "selected": ""} onClick={() => this.props.onTabChanged(0)}>Gambas</button>
+                        <button className={(this.props.tabIndex === 1) ? "selected": ""} onClick={() => this.props.onTabChanged(1)}>Tattier</button>
+                        <button className={(this.props.tabIndex === 2) ? "selected": ""} onClick={() => this.props.onTabChanged(2)}>Louvré</button>
+                        <button className={(this.props.tabIndex === 3) ? "selected": ""} onClick={() => this.props.onTabChanged(3)}>Rüpee</button>
                     </div>
                 </div>
             </div>

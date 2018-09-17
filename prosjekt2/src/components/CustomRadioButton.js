@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 class CustomRadioButton extends Component {
 
     componentDidMount() {
-        if (this.props.checked) {
+        if (this.props.defaultChecked) {
             let radio = this.refs[this.props.value];
             radio.checked = true;
+            this.props.onChange(this.props.group, this.props.value);
         }
     }
 
@@ -15,8 +16,8 @@ class CustomRadioButton extends Component {
         return (
             <label>
                 {this.props.title}
-                <input type='radio' className="sidebar-radio" name={this.props.groupname} value={this.props.value}
-                       ref={this.props.value} />
+                <input type='radio' className="sidebar-radio" name={this.props.group} value={this.props.value}
+                       ref={this.props.value} onChange={()=>this.props.onChange(this.props.group, this.props.value)} />
                 <span className="custom-radio" />
             </label>
         );
@@ -24,9 +25,10 @@ class CustomRadioButton extends Component {
 
     static propTypes={
         title: PropTypes.string,
-        groupname: PropTypes.string,
+        group: PropTypes.string,
         value: PropTypes.string,
-        checked: PropTypes.bool,
+        defaultChecked: PropTypes.bool,
+        onChange: PropTypes.func,
     }
 
 }
