@@ -84,15 +84,26 @@ class App extends Component {
     }
 
     async fetchImage(url) {
-        const response = await fetch(url, {});
-        const text = await response.text();
-        this.setState({svg: text});
+
+        if (sessionStorage.getItem(url) != null) {
+            this.setState({svg: sessionStorage.getItem(url)});
+        } else {
+            const response = await fetch(url, {});
+            const text = await response.text();
+            this.setState({svg: text});
+            sessionStorage.setItem(url, text);
+        }
     }
 
     async fetchText(category, index) {
-        const response = await fetch("/media/text/text.json", {});
-        const text = await response.json();
-        this.setState({text: text[category][index]});
+        if (sessionStorage.getItem("text-" + category + index) != null) {
+            this.setState({text: sessionStorage.getItem("text-" + category + index)});
+        } else {
+            const response = await fetch("/media/text/text.json", {});
+            const text = await response.json();
+            this.setState({text: text[category][index]});
+            sessionStorage.setItem("text-" + category + index, text[category][index]);
+        }
     }
 
     render() {
