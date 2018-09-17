@@ -35,13 +35,15 @@
 .image-selector div button:focus {
     outline: none;
 }
-
+.mobileOverlay{
+    display:none;
+}
 @media only screen and (max-width: 780px) {
     .topbar{
         grid-area: header !important;
         padding-top:4em;
-        z-index: 1;
-        height: 15.5em;
+        z-index: 100;
+        height: 12.25em;
     }
 
     .image-selector{
@@ -50,10 +52,30 @@
     }
 
     .image-selector div{
+        padding-top:1rem;
         display: block;
         vertical-align: middle;
         text-align: center;
         line-height: 2.5rem;
         height: 2.5rem;
+    }
+    .image-selector div button{
+        height: 2.5rem;
+        width:10rem;
+        font-weight: lighter;
+        color:#3700fe;
+        font-size: 20px;
+        text-decoration: none;
+        display:inline-block;
+        padding: 0.5em 1em;
+        border: none;
+        background-color: transparent;
+    }
+    .mobileOverlay{
+        display:inline-block;
+        width: 100%;
+        min-height: calc(100vh - 15.45em);
+        background-color:rgba(255,255,255,0.8);
+        margin-top:4px;
     }
 }

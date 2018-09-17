@@ -14,6 +14,7 @@ class Topbar extends Component {
                         <button className={(this.props.tabIndex === 3) ? "selected": ""} onClick={() => this.props.onTabChanged(3)}>Rüpee</button>
                     </div>
                 </div>
+                <div className="mobileOverlay"></div>
             </div>
         );
     }
