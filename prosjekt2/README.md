@@ -6,7 +6,7 @@ Dette prosjektet er en del av emnet 'IT2810 - Webutvikling' ved NTNU.
 
 ### Teknologi og testing
 
-Hele prosjektet vårt er gjennomført med React og alle komponenter er skapt fra bunnen av uten bruk av tredjepartsbibliotek. For det meste brukes ES6-syntaks i prosjektet, men for å hente svg- og tekstfiler bruker vi en syntaks som er tilgjengelig i ES7. Dette har vi fått avklart på piazza og har fått vite at det er lovlig. Bildene hentes i svg format, mens tekstene er implementert i en json-fil. 
+Hele prosjektet vårt er gjennomført med React og alle komponenter er skapt fra bunnen av uten bruk av tredjepartsbibliotek. For det meste brukes ES6-syntaks i prosjektet, men for å hente svg- og tekstfiler bruker vi en syntaks som er tilgjengelig i ES7. Dette har vi fått avklart på piazza og er lovlig. Bildene hentes i svg format, mens tekstene er implementert i en json-fil. 
 
 Vi har benyttet oss av google chrome sine innebygde ‘developer tools’ for å teste responsiviteten til nettsiden. I tillegg til å teste på vanlige skjermstørrelser har vi testet web-applikasjonen på følgende enheter i developer tools:
 
@@ -20,11 +20,11 @@ Vi har benyttet oss av google chrome sine innebygde ‘developer tools’ for å
 * iPad
 * iPad Pro
 
-For hver av enhetene testet vi både responsivitet og funksjonalitet. For mobilskjermer og nettbrett har vi testet responsiviteten både i horisontal og vertikal retning. Når vi testet responsivitet, sjekket vi hvordan komponentene ble plassert og skalert i forhold til hverandre og om noen av komponentene hadde uønskede features som for eksempel horisontale scrollbars. For funksjonalitet testet vi først kategorivalg i sidebaren ved å velge en ny kategori for bilde, tekst og lyd. Vi sjekket så at galleri-komponenten ble oppdatert på korrekt måte. Når dette var gjort testet vi tab-komponenten ved å gå gjennom alle tabbene og validere at galleriet ble oppdatert. Alle enhetene vi testet bestod både på responsivitet og funksjonalitet.
+For hver av enhetene testet vi både responsivitet og funksjonalitet. For mobilskjermer og nettbrett har vi testet responsiviteten både i horisontal og vertikal orientering. Når vi testet responsivitet, sjekket vi hvordan komponentene ble plassert og skalert i forhold til hverandre og om noen av komponentene hadde uønskede features som for eksempel horisontale scrollbars. For funksjonalitet testet vi først kategorivalg i sidebaren ved å velge en ny kategori for bilde, tekst og lyd. Vi sjekket så at galleri-komponenten ble oppdatert på korrekt måte. Når dette var gjort testet vi tab-komponenten ved å gå gjennom alle tabbene og validere at galleriet ble oppdatert. Alle enhetene vi testet bestod både på responsivitet og funksjonalitet.
 
 ### Layout
 
-Vi valgte å benytte oss av et lignende oppsett som layoutene i oppgaveteksten. Vi lagde så tre mockups av hvordan web-applikasjonen ville se ut på mobil (mobile-first prinsippet), disse finner du under Wiki -> Mockups. Mockup’ene dikterer fargebrukt og ønsket responsiv layout. På siden har vi etter vår mening oppnådd høy affordance ved å definere høykontrast-farger på klikkbare elementer, mens mørkere farger på tekst som ikke er klikkbar. 
+Vi valgte å benytte oss av et lignende oppsett som layoutene i oppgaveteksten. Vi lagde så tre mockups av hvordan web-applikasjonen ville se ut på mobil (mobile-first prinsippet), disse finner du under Wiki -> Mockups. Mockup’ene dikterer fargebruk og ønsket responsiv layout. På siden har vi etter vår mening oppnådd høy affordance ved å definere høykontrast-farger på klikkbare elementer, og mørkere farger på tekst som ikke er klikkbar. 
 
 Desktop-formatet baserte vi på layoutene gitt i oppgaveteksten. Ut ifra disse lagde vi fire react-komponenter (header, topbar, sidebar og gallery) som vi organiserte med CSS grid. Dette ga oss fleksibilitet med tanke på responsivt design. Header-komponen var en enkel komponent, som for det meste kun inneholder ett h1-element og en meny-knapp som vises på mindre skjermer. De andre komponentene er videre forklart under. 
 
@@ -46,7 +46,7 @@ Galleriet er en react-komponent som inneholder en svg-ramme, et felt til tekst o
 
 ### Implementering av funksjonalitet
 
-Oppgaven beskriver en løsning der brukeren skal kunne velge tekst, bilde og lyd, samt og en mulighet for å vise forskjellige kombinasjoner av dette (i form av ulike utstillinger). En av de største utfordringene vi møtte på her var å lage listeners på tvers av komponenter (sibling-kommunikasjon). Vi skjønte at dette ikke var mulig i React og fant ut at all kommunikasjon måtte gå igjennom en parent-komponent. I vårt tilfelle var dette “App.js”.
+Oppgaven beskriver en løsning der brukeren skal kunne velge tekst, bilde og lyd, samt muligheter for å vise forskjellige kombinasjoner av dette (i form av ulike utstillinger). En av de største utfordringene vi møtte på her var å lage listeners på tvers av komponenter (sibling-kommunikasjon). Vi skjønte at dette ikke var mulig i React og fant ut at all kommunikasjon måtte gå igjennom en parent-komponent. I vårt tilfelle var dette “App.js”.
 
 Selve kommunikasjonen ble håndtert ved å sende funksjoner og variabler ned til child-komponentene våre. Funksjoner som håndterte kategori- og tabvalg ble definert i parent-komponenten og utløst i child-komponentene. Vi holdt styr på hvilke bilder, tekster og lydfiler som var valgt ved å bruke state-variabler. Disse state-variablene ble igjen sendt ned til child-komponentene som props. For å endre visning av bilder og liknende trengte vi altså bare å oppdatere state-variablene. 
 
