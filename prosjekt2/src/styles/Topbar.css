@@ -25,35 +25,35 @@
     border: none;
     background-color: transparent;
 }
-.image-selector div button:hover{
+
+.image-selector div button:hover,
+.image-selector .selected {
     background-color: #3700fe;
     color:white;
 }
 
+.image-selector div button:focus {
+    outline: none;
+}
+
 @media only screen and (max-width: 780px) {
     .topbar{
-        height:15.5rem;
+        grid-area: header !important;
+        padding-top:4em;
+        z-index: 1;
+        height: 15.5em;
     }
+
     .image-selector{
         margin: auto;
         width: 9rem;
     }
+
     .image-selector div{
         display: block;
         vertical-align: middle;
         text-align: center;
         line-height: 2.5rem;
-    }
-    .image-selector div a h3{
-        font-weight: lighter;
-    }
-    .image-selector div a{
-        width: 7rem;
         height: 2.5rem;
-        color:#3700fe;
-        text-decoration: none;
-        display:block;
-        padding-right: 1em;
-        padding-left:1em;
     }
 }

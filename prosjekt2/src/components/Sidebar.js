@@ -29,7 +29,7 @@ class Sidebar extends Component {
         return (
             <div className="sidebar" style={{width: (this.state.isNavClosed && this.state.smallScreen) ? "0" : "20rem"}}>
                 <div className="sidebar-radio-wrapper">
-                    <h2 className="sidebar-subtitle">Media</h2>
+                    <h2 className="sidebar-subtitle">Lyd</h2>
                     <CustomRadioButton title={"Hund"} group={"sound"} value={"dog"} defaultChecked={true} onChange={this.props.onChange} />
                     <CustomRadioButton title={"Katt"} group={"sound"} value={"cat"} onChange={this.props.onChange} />
                     <CustomRadioButton title={"Rev"} group={"sound"} value={"fox"} onChange={this.props.onChange} />

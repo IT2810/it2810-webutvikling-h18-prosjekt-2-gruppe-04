@@ -11,6 +11,7 @@ class App extends Component {
 
     constructor(props) {
         super(props);
+        this.menuToggle = this.menuToggle.bind(this);
         this.onCategoryChanged = this.onCategoryChanged.bind(this);
         this.onTabChanged = this.onTabChanged.bind(this);
         this.fetchImage = this.fetchImage.bind(this);
@@ -23,7 +24,29 @@ class App extends Component {
             categorySvg: "dog",
             categoryText: "dog",
             tabIndex: 0,
+            isMenuHidden: false,
         }
+    }
+
+    componentDidMount() {
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.resize.bind(this));
+    }
+
+    resize() {
+        if (window.innerWidth > 780) {
+            this.setState({ isMenuHidden: false });
+        } else {
+            this.setState({ isMenuHidden: true });
+        }
+    }
+
+    menuToggle(){
+        this.setState(state => ({ isMenuHidden: !state.isMenuHidden }));
     }
 
     onCategoryChanged(group, value) {
@@ -60,22 +83,20 @@ class App extends Component {
     async fetchImage(url) {
         const response = await fetch(url, {});
         const text = await response.text();
-
         this.setState({svg: text});
     }
 
     async fetchText(category, index) {
         const response = await fetch("/media/text/text.json", {});
         const text = await response.json();
-
         this.setState({text: text[category][index]});
     }
 
     render() {
     return (
       <div className="grid-wrapper">
-          <Header/>
-          <Topbar onTabChanged={this.onTabChanged}/>
+          <Header onMenuToggle={this.menuToggle} isMenuHidden={this.state.isMenuHidden}/>
+          <Topbar onTabChanged={this.onTabChanged} isMenuHidden={this.state.isMenuHidden} tabIndex={this.state.tabIndex}/>
           <Sidebar onChange={this.onCategoryChanged}/>
           <Gallery svg={this.state.svg} text={this.state.text} audio={this.state.audio} />
       </div>
