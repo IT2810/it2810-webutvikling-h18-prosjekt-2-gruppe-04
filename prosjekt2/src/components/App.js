@@ -63,7 +63,7 @@ class App extends Component {
                 this.setState({categoryText: value});
                 break;
             case "sound":
-                url = "/media/" + group + "/" + value + "/" + this.state.tabIndex + ".wav";
+                url = "/media/" + group + "/" + value + "/" + this.state.tabIndex + ".mp3";
                 this.setState({audio: url});
                 this.setState({categoryAudio: value});
                 break;
@@ -77,7 +77,10 @@ class App extends Component {
         this.setState({tabIndex: index});
         this.fetchImage("/media/svg/" + this.state.categorySvg + "/" + index + ".svg");
         this.fetchText(this.state.categoryText, index);
-        this.setState({audio: "/media/sound/" + this.state.categoryAudio + "/" + index + ".wav"});
+        this.setState({audio: "/media/sound/" + this.state.categoryAudio + "/" + index + ".mp3"});
+        if (window.innerWidth < 780) {
+            this.setState({ isMenuHidden: true });
+        }
     }
 
     async fetchImage(url) {

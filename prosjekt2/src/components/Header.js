@@ -10,15 +10,10 @@ import {faTimes} from '@fortawesome/free-solid-svg-icons';
 library.add(faBars, faTimes);
 
 class Header extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="header" style={{borderBottom: (this.props.isMenuHidden) ? "4px solid #3700fe" : "4px solid white"}}>
-                <h1>My awesome gallery</h1>
+                <h1>Galleri Crék</h1>
                 <div className="menuButton" onClick={this.props.onMenuToggle}>{ this.props.isMenuHidden ? (
                     <FontAwesomeIcon icon="bars"/>
                 ) : (

@@ -1,10 +1,11 @@
+
 .grid-wrapper {
     display: grid;
     grid-template-areas:
             'header header'
             'topbar topbar'
             'sidebar gallery';
-    grid-template-columns: 20rem auto ;
+    grid-template-columns: 15rem auto ;
     grid-template-rows: 5rem 5rem auto;
     height: 100%;
 }

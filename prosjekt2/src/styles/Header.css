@@ -5,14 +5,14 @@
     line-height: 2.5rem;
 }
 .header h1{
-    color:#3700fe;
+    color:#191169;
 }
 .header .burger{
     display: none;
 }
 @media only screen and (max-width: 780px) {
     .header{
-        z-index: 2;
+        z-index: 101;
         display: inline-block;
         background-color:white;
         text-align: left;

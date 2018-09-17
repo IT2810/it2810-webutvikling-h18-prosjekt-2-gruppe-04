@@ -33,14 +33,11 @@
     margin-left: 20rem;
     border-bottom-right-radius: 70px;
     border-top-right-radius: 70px;
+    box-shadow: 4px 0 5px rgba(0,0,0,0.1);
     background-color: #3700fe;
     color: white;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-}
-
-.sidebar-button:hover {
-    background-color: rgba(0,0,0,0.15);
 }
 
 .sidebar-button:focus {
@@ -55,6 +52,7 @@
     .sidebar {
         grid-area: gallery;
         z-index: 99;
+        box-shadow: 4px 0 5px rgba(0,0,0,0.1);
     }
 }
 
