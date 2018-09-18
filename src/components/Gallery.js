@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
 import '../styles/Gallery.css';
-
+import PropTypes from 'prop-types';
 
 class Gallery extends Component {
 
+    // Constructor
     constructor(props) {
         super(props);
         this.audio = React.createRef();
     }
 
+    // Ensures audio is playable after the audio source changes.
     componentDidUpdate(prevProps) {
         if (prevProps.audio !== this.props.audio) {
             this.audio.current.load();
@@ -37,6 +39,12 @@ class Gallery extends Component {
                 </div>
             </div>
         )
+    }
+
+    static propTypes = {
+        svg: PropTypes.string,
+        text: PropTypes.string,
+        audio: PropTypes.string,
     }
 }
 

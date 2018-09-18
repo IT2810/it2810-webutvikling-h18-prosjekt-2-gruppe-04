@@ -1,11 +1,14 @@
-import React, {Component} from 'react';
-import '../styles/Header.css';
 /*Det ble avklart at vi kan bruke Font Awesome i prosjektet for å legge inn ikoner, etc.
  Link for oppklaring:https://piazza.com/class/jl25sg0g4ql5nk?cid=39*/
+
+import React, {Component} from 'react';
+import '../styles/Header.css';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {faTimes} from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
+
 
 library.add(faBars, faTimes);
 
@@ -21,6 +24,11 @@ class Header extends Component {
                 )}</div>
             </div>
         );
+    }
+
+    static propTypes = {
+        isMenuHidden: PropTypes.bool,
+        onMenuToggle: PropTypes.func,
     }
 }
 

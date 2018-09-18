@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import '../styles/Sidebar.css';
 import CustomRadioButton from "./CustomRadioButton";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import PropTypes from 'prop-types';
 
 class Sidebar extends Component {
 
+    // Constructor
     constructor(props) {
         super(props);
         this.toggleNav = this.toggleNav.bind(this);
@@ -13,22 +14,14 @@ class Sidebar extends Component {
         };
     }
 
-    componentDidMount() {
-        window.addEventListener("resize", this.resize.bind(this));
-        this.resize();
-    }
-
+    // Update state to toggle sidebar on small devices
     toggleNav() {
         this.setState(state => ({isNavClosed: !state.isNavClosed}));
     }
 
-    resize() {
-        this.setState({smallScreen: window.innerWidth <= 780});
-    }
-
     render() {
         return (
-            <div className="sidebar" style={{width: (this.state.isNavClosed && this.state.smallScreen) ? "0" : "15rem"}}>
+            <div className="sidebar" style={{width: (this.state.isNavClosed && this.props.smallScreen) ? "0" : "15rem"}}>
                 <div className="sidebar-radio-wrapper">
                     <h2 className="sidebar-subtitle">Lyd</h2>
                     <CustomRadioButton title={"Hund"} group={"sound"} value={"dog"} defaultChecked={true} onChange={this.props.onChange} />
@@ -53,10 +46,15 @@ class Sidebar extends Component {
                         className="sidebar-button" onClick={this.toggleNav}>{this.state.isNavClosed ? (
                     <span>></span>
                 ) : (
-                    <span>&lt;</span>
+                    <span>&lt;</span> // &lt; is used to escape the '<' sign in html
                 )}</button>
             </div>
         );
+    }
+
+    static propTypes = {
+        onChange: PropTypes.func,
+        smallScreen: PropTypes.bool,
     }
 }
 

@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 class CustomRadioButton extends Component {
 
+    // Checks the checkbox using JavaScrips since using the 'checked' tag in HTML
+    // gave weird results. Also calls Ajax to fetch initial svg, text and audio.
     componentDidMount() {
         if (this.props.defaultChecked) {
             let radio = this.refs[this.props.value];
@@ -23,7 +25,7 @@ class CustomRadioButton extends Component {
         );
     }
 
-    static propTypes={
+    static propTypes = {
         title: PropTypes.string,
         group: PropTypes.string,
         value: PropTypes.string,
