@@ -20,7 +20,7 @@ Vi har benyttet oss av google chrome sine innebygde ‘developer tools’ for å
 * iPad
 * iPad Pro
 
-For hver av enhetene testet vi både responsivitet og funksjonalitet. For mobilskjermer og nettbrett har vi testet responsiviteten både i horisontal og vertikal orientering. Når vi testet responsivitet, sjekket vi hvordan komponentene ble plassert og skalert i forhold til hverandre og om noen av komponentene hadde uønskede features som for eksempel horisontale scrollbars. For funksjonalitet testet vi først kategorivalg i sidebaren ved å velge en ny kategori for bilde, tekst og lyd. Vi sjekket så at galleri-komponenten ble oppdatert på korrekt måte. Når dette var gjort testet vi tab-komponenten ved å gå gjennom alle tabbene og validere at galleriet ble oppdatert. Alle enhetene vi testet bestod både på responsivitet og funksjonalitet.
+For hver av enhetene testet vi både responsivitet og funksjonalitet. For mobilskjermer og nettbrett har vi testet responsiviteten både i horisontal og vertikal orientering. Når vi testet responsivitet, sjekket vi hvordan komponentene ble plassert og skalert i forhold til hverandre og om noen av komponentene hadde uønsket oppførsel som for eksempel horisontale scrollbars. For funksjonalitet testet vi først kategorivalg i sidebaren ved å velge en ny kategori for bilde, tekst og lyd. Vi sjekket så at galleri-komponenten ble oppdatert på korrekt måte. Når dette var gjort testet vi tab-komponenten ved å gå gjennom alle tabbene og validere at galleriet ble oppdatert. Alle enhetene vi testet bestod både på responsivitet og funksjonalitet.
 
 ### Layout
 
@@ -30,7 +30,7 @@ Desktop-formatet baserte vi på layoutene gitt i oppgaveteksten. Ut ifra disse l
 
 ### Sidebar
 
-Vi tok delvis inspirasjon fra layout eksemplene som ble utgitt med oppgaveteksten og valgte å implementere kategorivalg med en sidebar. I eksempelet var sidebaren plassert på høyresiden av gallerivisningen, men vi fant at det var mer intuitivt å plassere denne på venstresiden i stedet. Sidebaren har konstant bredde og dette valget tok vi siden vi mente at dette var penest.
+Vi tok delvis inspirasjon fra layout eksemplene som ble utgitt med oppgaveteksten og valgte å implementere kategorivalg med en sidebar. I eksempelet var sidebaren plassert på høyresiden av gallerivisningen, men vi fant det mer intuitivt å plassere denne på venstresiden i stedet. Sidebaren har konstant bredde og dette valget tok vi siden vi mente at dette var penest.
 
 For mindre skjermer hadde vi problemer med størrelsen på sidebaren. Denne var for stor og etterlot ikke nok plass til de andre komponentene, spesielt ble galleriet veldig trangt. Vi valgte derfor å bruke en sidebar som glir inn fra venstresiden når dette trengs. På mobil kan sidebaren toggles av og på ved å trykke på knappen med et “>”-symbol.
 
