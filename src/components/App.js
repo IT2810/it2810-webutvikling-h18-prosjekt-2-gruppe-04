@@ -82,7 +82,8 @@ class App extends Component {
         this.setState({tabIndex: index});
         this.fetchImage("/media/svg/" + this.state.categorySvg + "/" + index + ".svg");
         this.fetchText(this.state.categoryText, index);
-        this.setState({audio: "/media/sound/" + this.state.categoryAudio + "/" + index + ".mp3"});
+        let url = "http://it2810-04.idi.ntnu.no/prosjekt2/media/sound/" + this.state.categoryAudio + "/" + index + ".mp3";
+        this.setState({audio: url});
         if (window.innerWidth < 780) {
             this.setState({ isMenuHidden: true });
         }
@@ -90,11 +91,11 @@ class App extends Component {
 
     // Keeps track of which svg-files are in the session storage and updates the svg image in the gallery
     async fetchImage(url) {
-        url = "http://it2810-04.idi.ntnu.no/prosjekt2" + url;
+        let domain = "http://it2810-04.idi.ntnu.no/prosjekt2";
         if (sessionStorage.getItem(url) != null) {
             this.setState({svg: sessionStorage.getItem(url)});
         } else {
-            const response = await fetch(url, {});
+            const response = await fetch(domain + url, {});
             const text = await response.text();
             this.setState({svg: text});
             sessionStorage.setItem(url, text);
