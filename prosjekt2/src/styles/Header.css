@@ -1,17 +1,16 @@
-.header{
+.header {
     background-color:white;
     text-align: center;
     vertical-align: middle;
     line-height: 2.5rem;
 }
-.header h1{
+
+.header h1 {
     color:#191169;
 }
-.header .burger{
-    display: none;
-}
+
 @media only screen and (max-width: 780px) {
-    .header{
+    .header {
         z-index: 101;
         display: inline-block;
         background-color:white;
@@ -20,10 +19,12 @@
         vertical-align: middle;
         line-height: 3.2rem;
     }
-    .header h1{
+
+    .header h1 {
         font-size: 1.5rem;
     }
-    .header .menuButton{
+
+    .header .menuButton {
         display: inline-block;
         position:absolute;
         right: 1.3rem;
@@ -32,14 +33,5 @@
         font-size: 2.5rem;
         height:2.5rem;
         color:#3700fe;
-    }
-    .header a:visited{
-        color:#3700fe;
-    }
-    .header a:active{
-        color: #2e00af;
-    }
-    .header a:hover{
-        color: #3d00dc;
     }
 }

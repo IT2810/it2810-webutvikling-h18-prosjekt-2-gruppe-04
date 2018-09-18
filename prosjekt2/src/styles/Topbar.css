@@ -1,4 +1,4 @@
-.topbar{
+.topbar {
     background-color:white;
     width: 100%;
     border-bottom: 0.25rem solid #3700fe;
@@ -8,13 +8,14 @@
     height: 100%;
 }
 
-.image-selector div{
+.image-selector div {
     height: 100%;
     vertical-align: middle;
     text-align: center;
     line-height: 2.5rem;
 }
-.image-selector div button{
+
+.image-selector div button {
     height: 100%;
     font-weight: lighter;
     color:#3700fe;
@@ -35,23 +36,25 @@
 .image-selector div button:focus {
     outline: none;
 }
-.mobileOverlay{
+
+.mobileOverlay {
     display:none;
 }
+
 @media only screen and (max-width: 780px) {
-    .topbar{
+    .topbar {
         grid-area: header !important;
         padding-top:4em;
         z-index: 100;
         min-height: 12.25em;
     }
 
-    .image-selector{
+    .image-selector {
         margin: auto;
         width: 9rem;
     }
 
-    .image-selector div{
+    .image-selector div {
         padding-top:1rem;
         display: block;
         vertical-align: middle;
@@ -59,7 +62,8 @@
         line-height: 2.5rem;
         height: 2.5rem;
     }
-    .image-selector div button{
+
+    .image-selector div button {
         height: 2.5rem;
         width:10rem;
         font-weight: lighter;
@@ -71,7 +75,8 @@
         border: none;
         background-color: transparent;
     }
-    .mobileOverlay{
+
+    .mobileOverlay {
         display:inline-block;
         width: 100%;
         min-height: calc(100vh - 15.45em);

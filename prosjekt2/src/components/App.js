@@ -9,6 +9,7 @@ import Gallery from "./Gallery";
 
 class App extends Component {
 
+    // Constructor
     constructor(props) {
         super(props);
         this.menuToggle = this.menuToggle.bind(this);
@@ -28,27 +29,28 @@ class App extends Component {
         }
     }
 
+    // Add listener for resize event to ensure functionality
+    // only slides on small screens
     componentDidMount() {
         window.addEventListener("resize", this.resize.bind(this));
         this.resize();
     }
 
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.resize.bind(this));
-    }
-
+    // Keeps track of whether or not the device screen is small.
     resize() {
-        if (window.innerWidth > 780) {
-            this.setState({ isMenuHidden: false });
-        } else {
-            this.setState({ isMenuHidden: true });
-        }
+        this.setState({
+            smallScreen: window.innerWidth <= 780,
+            isMenuHidden: window.innerWidth <= 780,
+        });
     }
 
+    // Update state to toggle topbar on small devices
     menuToggle(){
         this.setState(state => ({ isMenuHidden: !state.isMenuHidden }));
     }
 
+    // Triggers when one of the categories has changed. Updates gallery with new images, texts and audio.
+    // Also keeps track of which categories are chosen so the correct files are fetched when the tab changes.
     onCategoryChanged(group, value) {
         let url;
         switch (group) {
@@ -73,6 +75,8 @@ class App extends Component {
         }
     }
 
+    // Triggers when the tab has changed. Updates gallery with new images, texts and audio.
+    // Also keeps track of which tab is chosen so the correct files are fetched when a category changes.
     onTabChanged(index) {
         this.setState({tabIndex: index});
         this.fetchImage("/media/svg/" + this.state.categorySvg + "/" + index + ".svg");
@@ -83,8 +87,8 @@ class App extends Component {
         }
     }
 
+    // Keeps track of which svg-files are in the session storage and updates the svg image in the gallery
     async fetchImage(url) {
-
         if (sessionStorage.getItem(url) != null) {
             this.setState({svg: sessionStorage.getItem(url)});
         } else {
@@ -95,6 +99,7 @@ class App extends Component {
         }
     }
 
+    // Keeps track of which texts are in the session storage and updates the gallery text
     async fetchText(category, index) {
         if (sessionStorage.getItem("text-" + category + index) != null) {
             this.setState({text: sessionStorage.getItem("text-" + category + index)});
@@ -107,14 +112,14 @@ class App extends Component {
     }
 
     render() {
-    return (
-      <div className="grid-wrapper">
-          <Header onMenuToggle={this.menuToggle} isMenuHidden={this.state.isMenuHidden}/>
-          <Topbar onTabChanged={this.onTabChanged} isMenuHidden={this.state.isMenuHidden} tabIndex={this.state.tabIndex}/>
-          <Sidebar onChange={this.onCategoryChanged}/>
-          <Gallery svg={this.state.svg} text={this.state.text} audio={this.state.audio} />
-      </div>
-    );
+        return (
+          <div className="grid-wrapper">
+              <Header onMenuToggle={this.menuToggle} isMenuHidden={this.state.isMenuHidden}/>
+              <Topbar onTabChanged={this.onTabChanged} isMenuHidden={this.state.isMenuHidden} tabIndex={this.state.tabIndex}/>
+              <Sidebar onChange={this.onCategoryChanged} smallScreen={this.state.smallScreen}/>
+              <Gallery svg={this.state.svg} text={this.state.text} audio={this.state.audio} />
+          </div>
+        );
     }
 }
 

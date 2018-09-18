@@ -5,6 +5,7 @@ body {
   font-family: 'Arista', 'Arial', sans-serif;
   height: 100vh;
 }
+
 @font-face {
   font-family: 'Arista';
   src: url(../fonts/Paloseco-Light.ttf);
