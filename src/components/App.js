@@ -66,6 +66,7 @@ class App extends Component {
                 break;
             case "sound":
                 url = "/media/" + group + "/" + value + "/" + this.state.tabIndex + ".mp3";
+                url = "http://it2810-04.idi.ntnu.no/prosjekt2" + url;
                 this.setState({audio: url});
                 this.setState({categoryAudio: value});
                 break;
@@ -89,6 +90,7 @@ class App extends Component {
 
     // Keeps track of which svg-files are in the session storage and updates the svg image in the gallery
     async fetchImage(url) {
+        url = "http://it2810-04.idi.ntnu.no/prosjekt2" + url;
         if (sessionStorage.getItem(url) != null) {
             this.setState({svg: sessionStorage.getItem(url)});
         } else {
@@ -104,7 +106,7 @@ class App extends Component {
         if (sessionStorage.getItem("text-" + category + index) != null) {
             this.setState({text: sessionStorage.getItem("text-" + category + index)});
         } else {
-            const response = await fetch("/media/text/text.json", {});
+            const response = await fetch("http://it2810-04.idi.ntnu.no/prosjekt2/media/text/text.json", {});
             const text = await response.json();
             this.setState({text: text[category][index]});
             sessionStorage.setItem("text-" + category + index, text[category][index]);
