@@ -5,6 +5,9 @@
 }
 
 .image-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
 }
 
@@ -15,7 +18,7 @@
     line-height: 2.5rem;
 }
 
-.image-selector div button {
+.image-selector button {
     height: 100%;
     font-weight: lighter;
     color:#3700fe;
@@ -27,31 +30,31 @@
     background-color: transparent;
 }
 
-.image-selector div button:hover,
+.image-selector button:hover,
 .image-selector .selected {
     background-color: #3700fe;
     color:white;
 }
 
-.image-selector div button:focus {
+.image-selector button:focus {
     outline: none;
 }
 
 .mobileOverlay {
-    display:none;
+    display: none;
 }
 
 @media only screen and (max-width: 780px) {
     .topbar {
         grid-area: header !important;
-        padding-top:4em;
-        z-index: 100;
-        min-height: 12.25em;
+        padding-top:5rem;
+        z-index: 3;
+        min-height: 12.25rem;
     }
 
     .image-selector {
-        margin: auto;
-        width: 9rem;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .image-selector div {
@@ -63,7 +66,7 @@
         height: 2.5rem;
     }
 
-    .image-selector div button {
+    .image-selector button {
         height: 2.5rem;
         width:10rem;
         font-weight: lighter;
@@ -79,7 +82,8 @@
     .mobileOverlay {
         display:inline-block;
         width: 100%;
-        min-height: calc(100vh - 15.45em);
+        position: fixed;
+        min-height: 100vh;
         background-color:rgba(255,255,255,0.8);
         margin-top:4px;
     }

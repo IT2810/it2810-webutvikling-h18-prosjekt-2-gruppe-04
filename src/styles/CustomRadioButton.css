@@ -10,7 +10,8 @@
 }
 
 .sidebar-radio-wrapper label {
-    height: 3rem;
+    height: 20%;
+    max-height: 3rem;
     font-size: 20px;
     display: flex;
     justify-content: space-between;

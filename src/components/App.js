@@ -118,7 +118,8 @@ class App extends Component {
         return (
           <div className="grid-wrapper">
               <Header onMenuToggle={this.menuToggle} isMenuHidden={this.state.isMenuHidden}/>
-              <Topbar onTabChanged={this.onTabChanged} isMenuHidden={this.state.isMenuHidden} tabIndex={this.state.tabIndex}/>
+              <Topbar onTabChanged={this.onTabChanged} isMenuHidden={this.state.isMenuHidden}
+                      tabIndex={this.state.tabIndex} onMenuToggle={this.menuToggle}/>
               <Sidebar onChange={this.onCategoryChanged} smallScreen={this.state.smallScreen}/>
               <Gallery svg={this.state.svg} text={this.state.text} audio={this.state.audio} />
           </div>
