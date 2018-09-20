@@ -8,7 +8,7 @@ Dette prosjektet er en del av emnet 'IT2810 - Webutvikling' ved NTNU.
 
 Hele prosjektet vårt er gjennomført med React og alle komponenter er skapt fra bunnen av uten bruk av tredjepartsbibliotek. For det meste brukes ES6-syntaks i prosjektet, men for å hente svg- og tekstfiler bruker vi en syntaks som er tilgjengelig i ES7. Dette har vi fått avklart på piazza og er lovlig. Bildene hentes i svg format, mens tekstene er implementert i en json-fil. 
 
-Angående testing har vi testet applikasjonen på de vanligste nettleserne, altså Chrome, Firefox og Safari. Vi har hovedsaklig benyttet oss av google chrome sine innebygde ‘developer tools’ for å teste responsiviteten til nettsiden. I tillegg til å teste på vanlige skjermstørrelser har vi testet web-applikasjonen på følgende enheter i developer tools:
+Angående testing har vi testet applikasjonen på de vanligste nettleserne, altså Chrome og Firefox. Vi har hovedsaklig benyttet oss av google chrome sine innebygde ‘developer tools’ for å teste responsiviteten til nettsiden. I tillegg til å teste på vanlige skjermstørrelser har vi testet web-applikasjonen på følgende enheter i developer tools:
 
 * Galaxy S5
 * Pixel 2
