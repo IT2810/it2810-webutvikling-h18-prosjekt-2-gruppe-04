@@ -13,22 +13,26 @@ import PropTypes from 'prop-types';
 library.add(faBars, faTimes);
 
 class Header extends Component {
+
     render() {
         return (
             <div className="header" style={{borderBottom: (this.props.isMenuHidden) ? "4px solid #3700fe" : "4px solid white"}}>
+                <span className="sidebar-button" onClick={this.props.onSidebarToggle}>
+                    {this.props.isSidebarHidden ? ">" : "<"}
+                </span>
                 <h1>Galleri Crék</h1>
-                <div className="menuButton" onClick={this.props.onMenuToggle}>{ this.props.isMenuHidden ? (
-                    <FontAwesomeIcon icon="bars"/>
-                ) : (
-                    <FontAwesomeIcon icon="times"/>
-                )}</div>
+                <div className="menuButton" onClick={this.props.onMenuToggle}>
+                    {this.props.isMenuHidden ? (<FontAwesomeIcon icon="bars"/>) : (<FontAwesomeIcon icon="times"/>)}
+                </div>
             </div>
         );
     }
 
     static propTypes = {
         isMenuHidden: PropTypes.bool,
+        isSidebarHidden: PropTypes.bool,
         onMenuToggle: PropTypes.func,
+        onSidebarToggle: PropTypes.func,
     }
 }
 
