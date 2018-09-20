@@ -4,11 +4,6 @@ import PropTypes from 'prop-types';
 
 class Gallery extends Component {
 
-    // Constructor
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="gallery">
