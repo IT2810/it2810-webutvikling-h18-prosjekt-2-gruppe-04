@@ -1,5 +1,6 @@
 .gallery {
     grid-area: gallery;
+    z-index: 1;
 }
 
 .gallery-wrapper {
