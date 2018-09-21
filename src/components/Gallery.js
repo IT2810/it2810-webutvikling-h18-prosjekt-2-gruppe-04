@@ -11,6 +11,7 @@ class Gallery extends Component {
 
     }
 
+    // Loads audio when src change or else audio wont work properly.
     componentDidUpdate(prevProps) {
         if (prevProps.audio !== this.props.audio) {
             this.audio.current.load();
