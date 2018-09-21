@@ -8,7 +8,7 @@ Dette prosjektet er en del av emnet 'IT2810 - Webutvikling' ved NTNU.
 
 Hele prosjektet vårt er gjennomført med React og alle komponenter er skapt fra bunnen av uten bruk av tredjepartsbibliotek. For det meste brukes ES6-syntaks i prosjektet, men for å hente svg- og tekstfiler bruker vi en syntaks som er tilgjengelig i ES7. Dette har vi fått avklart på piazza og er lovlig. Bildene hentes i svg format, mens tekstene er implementert i en json-fil. 
 
-Angående testing har vi testet applikasjonen på de vanligste nettleserne, altså Chrome og Firefox. Vi har hovedsaklig benyttet oss av google chrome sine innebygde ‘developer tools’ for å teste responsiviteten til nettsiden. I tillegg til å teste på vanlige skjermstørrelser har vi testet web-applikasjonen på følgende enheter i developer tools:
+Angående testing har vi testet applikasjonen på de vanligste nettleserne, altså Chrome og Firefox. I løpet av prosjektet har vi hovedsaklig benyttet oss av google chrome sine innebygde ‘developer tools’ for å teste responsiviteten til nettsiden. I tillegg til å teste på vanlige skjermstørrelser har vi testet web-applikasjonen på følgende enheter i developer tools:
 
 * Galaxy S5
 * Pixel 2
@@ -22,9 +22,11 @@ Angående testing har vi testet applikasjonen på de vanligste nettleserne, alts
 
 For hver av enhetene testet vi både responsivitet og funksjonalitet. For mobilskjermer og nettbrett har vi testet responsiviteten både i horisontal og vertikal orientering. Når vi testet responsivitet, sjekket vi hvordan komponentene ble plassert og skalert i forhold til hverandre og om noen av komponentene hadde uønskede features som for eksempel horisontale scrollbars. For funksjonalitet testet vi først kategorivalg i sidebaren ved å velge en ny kategori for bilde, tekst og lyd. Vi sjekket så at galleri-komponenten ble oppdatert på korrekt måte. Når dette var gjort testet vi tab-komponenten ved å gå gjennom alle tabbene og validere at galleriet ble oppdatert. Alle enhetene vi testet bestod både på responsivitet og funksjonalitet.
 
+Ved testing på fysiske enheter (iPhone SE, iPhone X og iPad) opplevde vi samtlige «z-index»-relaterte problemer hvor sidemenyen ikke var plassert riktig. Dette gjorde at vi måtte endre på designet siden knappen som åpnet/lukket sidemenyen ikke fungerte som den skulle originalt. Derfor ble det en knapp i headeren som styrer dette på mobile enheter.
+
 ### Layout
 
-Vi valgte å benytte oss av et lignende oppsett som layoutene i oppgaveteksten. Vi lagde så tre mockups av hvordan web-applikasjonen ville se ut på mobil (mobile-first prinsippet), disse finner du under Wiki -> Mockups. Mockup’ene dikterer fargebruk og ønsket responsiv layout. På siden har vi etter vår mening oppnådd høy affordance ved å definere høykontrast-farger på klikkbare elementer, og mørkere farger på tekst som ikke er klikkbar. 
+Vi valgte å benytte oss av et lignende oppsett som layoutene i oppgaveteksten. Vi lagde så tre mockups av hvordan web-applikasjonen ville se ut på mobil (mobile-first prinsippet), disse finner du under Wiki -> Mockups. Mockup’ene dikterer fargebruk og ønsket responsiv layout, men ble endret litt på etter testing mot slutten av programmet. På siden har vi etter vår mening oppnådd høy affordance ved å definere høykontrast-farger på klikkbare elementer, og mørkere farger på tekst som ikke er klikkbar.
 
 Desktop-formatet baserte vi på layoutene gitt i oppgaveteksten. Ut ifra disse lagde vi fire react-komponenter (header, topbar, sidebar og gallery) som vi organiserte med CSS grid. Dette ga oss fleksibilitet med tanke på responsivt design. Header-komponen var en enkel komponent, som for det meste kun inneholder ett h1-element og en meny-knapp som vises på mindre skjermer. De andre komponentene er videre forklart under. 
 
