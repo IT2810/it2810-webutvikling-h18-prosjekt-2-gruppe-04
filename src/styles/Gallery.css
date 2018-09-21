@@ -58,7 +58,7 @@
                 'svg-frame'
                 'playbar'
                 'text';
-        grid-template-columns: auto; /* vw here because of visual bugs in firefox */
+        grid-template-columns: auto;
         grid-template-rows: 20rem 5rem auto;
     }
 

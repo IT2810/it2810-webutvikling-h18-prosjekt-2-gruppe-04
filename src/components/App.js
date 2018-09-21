@@ -13,6 +13,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.menuToggle = this.menuToggle.bind(this);
+        this.sidebarToggle = this.sidebarToggle.bind(this);
         this.onCategoryChanged = this.onCategoryChanged.bind(this);
         this.onTabChanged = this.onTabChanged.bind(this);
         this.fetchImage = this.fetchImage.bind(this);
@@ -26,6 +27,7 @@ class App extends Component {
             categoryText: "dog",
             tabIndex: 0,
             isMenuHidden: false,
+            isNavClosed: true,
         }
     }
 
@@ -47,6 +49,11 @@ class App extends Component {
     // Update state to toggle topbar on small devices
     menuToggle(){
         this.setState(state => ({ isMenuHidden: !state.isMenuHidden }));
+    }
+
+    // Update state to toggle sidebar on small devices
+    sidebarToggle() {
+        this.setState(state => ({isNavClosed: !state.isNavClosed}));
     }
 
     // Triggers when one of the categories has changed. Updates gallery with new images, texts and audio.
@@ -117,10 +124,12 @@ class App extends Component {
     render() {
         return (
           <div className="grid-wrapper">
-              <Header onMenuToggle={this.menuToggle} isMenuHidden={this.state.isMenuHidden}/>
+              <Header onMenuToggle={this.menuToggle} isMenuHidden={this.state.isMenuHidden}
+                      onSidebarToggle={this.sidebarToggle} isSidebarHidden={this.state.isNavClosed}/>
               <Topbar onTabChanged={this.onTabChanged} isMenuHidden={this.state.isMenuHidden}
                       tabIndex={this.state.tabIndex} onMenuToggle={this.menuToggle}/>
-              <Sidebar onChange={this.onCategoryChanged} smallScreen={this.state.smallScreen}/>
+              <Sidebar onChange={this.onCategoryChanged} smallScreen={this.state.smallScreen}
+                       isNavClosed={this.state.isNavClosed}/>
               <Gallery svg={this.state.svg} text={this.state.text} audio={this.state.audio} />
           </div>
         );
